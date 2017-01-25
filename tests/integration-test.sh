@@ -20,6 +20,8 @@ set +x
 
 dpkg -l > package.list
 
+
+
 buildinfo=$(drone build info vmware/vic $DRONE_BUILD_NUMBER)
 
 if [ $DRONE_BRANCH = "master" ] && [ $DRONE_REPO = "vmware/vic" ]; then
